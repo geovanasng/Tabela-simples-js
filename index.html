@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script> 
+            function adiciona(){
+                let inputNome = document.querySelector("#nome")
+                let inputSobrenome = document.querySelector("#sobrenome")
+                let inputIdade = document.querySelector("#idade")
+                
+                let tbody = document.querySelector("tbody");
+                tbody.innerHTML += `
+                    <tr>
+                        <td> ${inputNome.value}</td>
+                        <td> ${inputSobrenome.value}</td>
+                        <td> ${inputIdade.value}</td>
+                    </tr>    
+                `;
+
+            }
+        </script>
+
+
+        Insira as informacoes: 
+        <input type="text" id = "nome" placeholder="Nome: "/>
+        <input type="text" id = "sobrenome" placeholder="Sobrenome: "/>
+        <input type="text" id = "idade" placeholder="Idade: "/>
+        <button onclick="adiciona()">Adicionar</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th> Nome </th> 
+                    <th> Sobrenome </th> 
+                    <th> Idade </th>                      
+                </tr>
+              
+            </thead>
+            <tbody>
+               <tr>
+                    <td> Geovana </td>
+                    <td> Silva </td>
+                    <td> 20 anos </td>
+               </tr>
+
+               <tr>
+                <td> Geovana </td>
+                <td> Silva</td>
+                <td> 20 anos </td>
+               </tr>
+            </tbody>
+        </table>
+    </body>
+
+</html>
